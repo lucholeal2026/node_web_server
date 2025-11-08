@@ -1,0 +1,7 @@
+para inicializar el proyecto
+npm init
+
+instalar 
+npm i dotenv
+npm i env-var
+npm i express
