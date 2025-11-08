@@ -5,3 +5,9 @@ instalar
 npm i dotenv
 npm i env-var
 npm i express
+
+Para subir a git
+git initgit add .
+git commit -am "Realizamos un servidor que expone páginas estáticas con Node"
+git remote add origin https://github.com/lucholeal2026/node_web_server.git
+git push -u origin master
