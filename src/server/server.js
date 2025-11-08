@@ -1,8 +1,14 @@
 //manejamos nuestro servidor
-const express = require("express");
-const path = require("path"); //para poder leer las carpetas de nuestro proyecto (es propio de node)
+//const express = require("express");
+import express from "express";
 
-const startServer = (options) => {
+//const path = require("path"); //para poder leer las carpetas de nuestro proyecto (es propio de node)
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export const startServer = (options) => {
   const { port, public_path = "public" } = options;
   // console.log(port);
   // console.log(public_path);
@@ -13,9 +19,11 @@ const startServer = (options) => {
 
   //
   app.get(/.*/, (req, res) => {
-    const indexPath = path.join(
-      __dirname + `../../../${public_path}/index.html`
-    );
+    // const indexPath = path.join(
+    //   __dirname + `../../../${public_path}/index.html`
+    // );
+    const indexPath = path.join(process.cwd(), public_path, "index.html");
+
     res.sendFile(indexPath);
   });
 
@@ -24,6 +32,6 @@ const startServer = (options) => {
   });
 };
 
-module.exports = {
-  startServer,
-};
+// module.exports = {
+//   startServer,
+// };
