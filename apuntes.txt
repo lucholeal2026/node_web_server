@@ -11,3 +11,11 @@ git initgit add .
 git commit -am "Realizamos un servidor que expone páginas estáticas con Node"
 git remote add origin https://github.com/lucholeal2026/node_web_server.git
 git push -u origin master
+
+creamos un readme
+en la pagina: https://stackedit.io/app#
+escribimos el readme
+lo copiamos en un archivo README.md en nuestro raiz del proyecto
+git add .
+git commit -am "Agregamos un readme"
+git push
